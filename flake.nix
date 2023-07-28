@@ -1,5 +1,5 @@
 {
-  description = "Nix build support for Floating";
+  description = "Nix development support for Wallpaper";
   inputs.nixpkgs.url = "nixpkgs/nixos-unstable";
   outputs = { self, nixpkgs }:
     let
@@ -40,7 +40,7 @@
         {
           default = let
             dotnet_devenv_sdk = (with nixpkgsFor.${system}.dotnetCorePackages; combinePackages [
-            sdk_8_0
+            sdk_7_0
             sdk_6_0
           ]);
           in nixpkgsFor.${system}.mkShell rec {

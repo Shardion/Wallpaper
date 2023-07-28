@@ -58,5 +58,16 @@ Your background won't change between different sessions on the same day - this i
 - [ ] Don't use the same background twice in a row
 - [ ] Support for `wlroots`-based Wayland compositors with `swaybg`
 - [ ] Support for background sources outside of local directories
-- [ ] Flatpak support
+- [ ] Clean up Nix support for more general use
 - [ ] Home Manager support
+- [ ] Flatpak support
+
+## Contributing
+
+Wallpaper is licensed under the GPLv3 (`GPL-3.0-or-later`).
+
+There are many `TODO` comments scattered around the codebase, which are good places
+to start when contributing to the project.
+
+Wallpaper's UI is created with [Cambalache,](https://gitlab.gnome.org/jpu/cambalache)
+and using Cambalache is helpful when working on it.
