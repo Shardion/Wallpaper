@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flurl" Version="3.0.7" />
+    <PackageReference Include="GirCore.Adw-1" Version="0.4.0" />
+    <PackageReference Include="GirCore.Gtk-4.0" Version="0.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Wallpaper.4.ui">
+      <LogicalName>Wallpaper.4.ui</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
