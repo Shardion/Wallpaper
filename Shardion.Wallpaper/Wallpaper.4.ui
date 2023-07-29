@@ -23,9 +23,9 @@
             <child type="end">
               <object class="GtkMenuButton">
                 <property name="icon-name">open-menu-symbolic</property>
-                <property name="popover">
-                  <object class="GtkPopover"/>
-                </property>
+                <property name="primary">True</property>
+                <!-- Custom fragments -->
+                <property name="menu-model">mainMenu</property>
               </object>
             </child>
           </object>
@@ -93,4 +93,79 @@
       </object>
     </child>
   </object>
+  <object class="GtkShortcutsWindow" id="_shortcutsWindow">
+    <property name="modal">True</property>
+    <child>
+      <object class="GtkShortcutsSection">
+        <property name="section-name">shortcuts</property>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title">Background</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;R</property>
+                <property name="action-name">app.randomBackground</property>
+                <property name="title">Random Background</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;T</property>
+                <property name="action-name">app.todaysBackground</property>
+                <property name="title">Today's Background</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title">Window</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;Q</property>
+                <property name="action-name">win.quit</property>
+                <property name="title">Quit</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">F1</property>
+                <property name="action-name">win.about</property>
+                <property name="title">About Wallpaper</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;question</property>
+                <property name="action-name">win.keyboardShortcuts</property>
+                <property name="title">Keyboard Shortcuts</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="AdwAboutWindow" id="_aboutWindow">
+    <property name="application-icon">application-x-executable</property>
+    <property name="application-name">Wallpaper</property>
+    <property name="developers">shardion</property>
+    <property name="issue-url">https://github.com/Shardion/Wallpaper/issues/</property>
+    <property name="license-type">gpl-3-0</property>
+    <property name="version">0.2.0</property>
+    <property name="website">https://github.com/Shardion/Wallpaper/</property>
+  </object>
+  <!-- Custom fragments -->
+  <menu id="mainMenu">
+    <section>
+      <item>
+        <attribute name="label">Keyboard Shortcuts</attribute>
+        <attribute name="action">win.keyboardShortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="label">About Wallpaper</attribute>
+        <attribute name="action">win.about</attribute>
+      </item>
+    </section>
+  </menu>
 </interface>

@@ -2,7 +2,7 @@
 <!DOCTYPE cambalache-project SYSTEM "cambalache-project.dtd">
 <cambalache-project version="0.12.0" target_tk="gtk-4.0">
   <ui>
-	(1,None,"gnome-wallpaper.ui","Wallpaper.4.ui",None,None,None,None,None,None,None),
+	(1,None,"gnome-wallpaper.ui","Wallpaper.4.ui",None,None,None,None,None,None,"&lt;menu id=\"mainMenu\"&gt;\n  &lt;section&gt;\n    &lt;item&gt;\n      &lt;attribute name=\"label\"&gt;Keyboard Shortcuts&lt;/attribute&gt;\n      &lt;attribute name=\"action\"&gt;win.keyboardShortcuts&lt;/attribute&gt;\n    &lt;/item&gt;\n    &lt;item&gt;\n      &lt;attribute name=\"label\"&gt;About Wallpaper&lt;/attribute&gt;\n      &lt;attribute name=\"action\"&gt;win.about&lt;/attribute&gt;\n    &lt;/item&gt;\n  &lt;/section&gt;\n&lt;/menu&gt;"),
 	(2,1,None,"WprSourceRow.4.ui",None,None,None,None,None,None,None)
   </ui>
   <object>
@@ -17,11 +17,20 @@
 	(1,39,"GtkListBoxRow","_addSourceRow",38,None,None,None,None,None),
 	(1,40,"GtkButton",None,39,None,None,None,None,None),
 	(1,44,"AdwWindowTitle",None,3,None,None,None,None,None),
-	(1,45,"GtkMenuButton",None,3,None,"end",None,None,None),
-	(1,46,"GtkPopover",None,45,None,None,None,None,None),
+	(1,45,"GtkMenuButton",None,3,None,"end",None,None,"&lt;property name=\"menu-model\"&gt;mainMenu&lt;/property&gt;"),
 	(1,47,"GtkBox",None,35,None,None,None,None,None),
 	(1,48,"GtkButton","_randomBackgroundButton",47,None,None,None,None,None),
 	(1,49,"GtkButton","_resetBackgroundButton",47,None,None,None,1,None),
+	(1,51,"GtkShortcutsWindow","_shortcutsWindow",None,None,None,None,None,None),
+	(1,52,"GtkShortcutsSection",None,51,None,None,None,None,None),
+	(1,53,"GtkShortcutsGroup",None,52,None,None,None,None,None),
+	(1,54,"GtkShortcutsShortcut",None,53,None,None,None,None,None),
+	(1,55,"GtkShortcutsShortcut",None,53,None,None,None,1,None),
+	(1,56,"AdwAboutWindow","_aboutWindow",None,None,None,None,None,None),
+	(1,57,"GtkShortcutsGroup",None,52,None,None,None,1,None),
+	(1,58,"GtkShortcutsShortcut",None,57,None,None,None,None,None),
+	(1,59,"GtkShortcutsShortcut",None,57,None,None,None,1,None),
+	(1,60,"GtkShortcutsShortcut",None,57,None,None,None,2,None),
 	(2,1,"AdwActionRow","WprStoreRow",None,None,None,None,None,None)
   </object>
   <object_property>
@@ -51,10 +60,36 @@
 	(1,40,"GtkWidget","margin-top","8",None,None,None,None,None,None,None,None,None),
 	(1,44,"AdwWindowTitle","title","Wallpaper",None,None,None,None,None,None,None,None,None),
 	(1,45,"GtkMenuButton","icon-name","open-menu-symbolic",None,None,None,None,None,None,None,None,None),
-	(1,45,"GtkMenuButton","popover",None,None,None,None,None,46,None,None,None,None),
+	(1,45,"GtkMenuButton","primary","True",None,None,None,None,None,None,None,None,None),
 	(1,47,"GtkBox","homogeneous","True",None,None,None,None,None,None,None,None,None),
 	(1,47,"GtkBox","spacing","5",None,None,None,None,None,None,None,None,None),
 	(1,48,"GtkButton","label","Random Background",None,None,None,None,None,None,None,None,None),
-	(1,49,"GtkButton","label","Today's Background",None,None,None,None,None,None,None,None,None)
+	(1,49,"GtkButton","label","Today's Background",None,None,None,None,None,None,None,None,None),
+	(1,51,"GtkWindow","modal","True",None,None,None,None,None,None,None,None,None),
+	(1,52,"GtkShortcutsSection","section-name","shortcuts",None,None,None,None,None,None,None,None,None),
+	(1,53,"GtkShortcutsGroup","title","Background",None,None,None,None,None,None,None,None,None),
+	(1,54,"GtkShortcutsShortcut","accelerator","&lt;Ctrl&gt;R",None,None,None,None,None,None,None,None,None),
+	(1,54,"GtkShortcutsShortcut","action-name","app.randomBackground",None,None,None,None,None,None,None,None,None),
+	(1,54,"GtkShortcutsShortcut","title","Random Background",None,None,None,None,None,None,None,None,None),
+	(1,55,"GtkShortcutsShortcut","accelerator","&lt;Ctrl&gt;T",None,None,None,None,None,None,None,None,None),
+	(1,55,"GtkShortcutsShortcut","action-name","app.todaysBackground",None,None,None,None,None,None,None,None,None),
+	(1,55,"GtkShortcutsShortcut","title","Today's Background",None,None,None,None,None,None,None,None,None),
+	(1,56,"AdwAboutWindow","application-icon","application-x-executable",None,None,None,None,None,None,None,None,None),
+	(1,56,"AdwAboutWindow","application-name","Wallpaper",None,None,None,None,None,None,None,None,None),
+	(1,56,"AdwAboutWindow","developers","shardion",None,None,None,None,None,None,None,None,None),
+	(1,56,"AdwAboutWindow","issue-url","https://github.com/Shardion/Wallpaper/issues/",None,None,None,None,None,None,None,None,None),
+	(1,56,"AdwAboutWindow","license-type","gpl-3-0",None,None,None,None,None,None,None,None,None),
+	(1,56,"AdwAboutWindow","version","0.2.0",None,None,None,None,None,None,None,None,None),
+	(1,56,"AdwAboutWindow","website","https://github.com/Shardion/Wallpaper/",None,None,None,None,None,None,None,None,None),
+	(1,57,"GtkShortcutsGroup","title","Window",None,None,None,None,None,None,None,None,None),
+	(1,58,"GtkShortcutsShortcut","accelerator","&lt;Ctrl&gt;Q",None,None,None,None,None,None,None,None,None),
+	(1,58,"GtkShortcutsShortcut","action-name","win.quit",None,None,None,None,None,None,None,None,None),
+	(1,58,"GtkShortcutsShortcut","title","Quit",None,None,None,None,None,None,None,None,None),
+	(1,59,"GtkShortcutsShortcut","accelerator","F1",None,None,None,None,None,None,None,None,None),
+	(1,59,"GtkShortcutsShortcut","action-name","win.about",None,None,None,None,None,None,None,None,None),
+	(1,59,"GtkShortcutsShortcut","title","About Wallpaper",None,None,None,None,None,None,None,None,None),
+	(1,60,"GtkShortcutsShortcut","accelerator","&lt;Ctrl&gt;question",None,None,None,None,None,None,None,None,None),
+	(1,60,"GtkShortcutsShortcut","action-name","win.keyboardShortcuts",None,None,None,None,None,None,None,None,None),
+	(1,60,"GtkShortcutsShortcut","title","Keyboard Shortcuts",None,None,None,None,None,None,None,None,None)
   </object_property>
 </cambalache-project>

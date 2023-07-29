@@ -36,7 +36,7 @@ namespace Shardion.Wallpaper
             Adw.Application application = Adw.Application.New("org.gir.core", Gio.ApplicationFlags.FlagsNone);
             application.OnActivate += (sender, args) =>
             {
-                WallpaperWindow window = new();
+                WallpaperWindow window = new((Adw.Application) sender);
                 window.Application = (Adw.Application) sender;
                 window.Show();
             };
