@@ -12,11 +12,11 @@ Incomplete features are marked with 🚧️.
 
 ## Features
 
-- 🚧️ Set a random background every day
+- 🚧 Set a random background every day
 - 🚧️ Get backgrounds from multiple different sources
 - Manually set a random background for a day
 
-## 🚧️ How to use 🚧️
+## 🚧️ How to use 🚧
 
 As Wallpaper is beta software, using it can be inconvenient.
 
