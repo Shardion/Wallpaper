@@ -15,7 +15,7 @@
         wallpaper = with final; buildDotnetModule rec {
           name = "${pname}-${version}";
           pname = "wallpaper";
-          version = "1.0.0";
+          version = "0.2.0";
 
           src = ./Shardion.Wallpaper;
           projectFile = "Shardion.Wallpaper.csproj";

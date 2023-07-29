@@ -2,8 +2,7 @@
 <!DOCTYPE cambalache-project SYSTEM "cambalache-project.dtd">
 <cambalache-project version="0.12.0" target_tk="gtk-4.0">
   <ui>
-	(1,None,"gnome-wallpaper.ui","Wallpaper.4.ui",None,None,None,None,None,None,"&lt;menu id=\"mainMenu\"&gt;\n  &lt;section&gt;\n    &lt;item&gt;\n      &lt;attribute name=\"label\"&gt;Keyboard Shortcuts&lt;/attribute&gt;\n      &lt;attribute name=\"action\"&gt;win.keyboardShortcuts&lt;/attribute&gt;\n    &lt;/item&gt;\n    &lt;item&gt;\n      &lt;attribute name=\"label\"&gt;About Wallpaper&lt;/attribute&gt;\n      &lt;attribute name=\"action\"&gt;win.about&lt;/attribute&gt;\n    &lt;/item&gt;\n  &lt;/section&gt;\n&lt;/menu&gt;"),
-	(2,1,None,"WprSourceRow.4.ui",None,None,None,None,None,None,None)
+	(1,None,"gnome-wallpaper.ui","Wallpaper.4.ui",None,None,None,None,None,None,"&lt;menu id=\"mainMenu\"&gt;\n  &lt;section&gt;\n    &lt;item&gt;\n      &lt;attribute name=\"label\"&gt;Keyboard Shortcuts&lt;/attribute&gt;\n      &lt;attribute name=\"action\"&gt;win.keyboardShortcuts&lt;/attribute&gt;\n    &lt;/item&gt;\n    &lt;item&gt;\n      &lt;attribute name=\"label\"&gt;About Wallpaper&lt;/attribute&gt;\n      &lt;attribute name=\"action\"&gt;win.about&lt;/attribute&gt;\n    &lt;/item&gt;\n  &lt;/section&gt;\n&lt;/menu&gt;")
   </ui>
   <object>
 	(1,1,"AdwApplicationWindow","_mainWindow",None,None,None,None,None,None),
@@ -30,8 +29,7 @@
 	(1,57,"GtkShortcutsGroup",None,52,None,None,None,1,None),
 	(1,58,"GtkShortcutsShortcut",None,57,None,None,None,None,None),
 	(1,59,"GtkShortcutsShortcut",None,57,None,None,None,1,None),
-	(1,60,"GtkShortcutsShortcut",None,57,None,None,None,2,None),
-	(2,1,"AdwActionRow","WprStoreRow",None,None,None,None,None,None)
+	(1,60,"GtkShortcutsShortcut",None,57,None,None,None,2,None)
   </object>
   <object_property>
 	(1,1,"GtkWidget","hexpand","True",None,None,None,None,None,None,None,None,None),

@@ -36,11 +36,11 @@ Place a JSON file with any name and the following contents inside the `sources` 
 You may place multiple JSON files inside the `sources` directory to add multiple directories
 from which Wallpaper will pull its backgrounds.
 
-Restart the program to reload its config, and then click the `Today's background` button.
+Restart the program to reload its config, and then click the `Today's Background` button.
 If all went well, your background should change (unless today's background is the same as the one you've already set yourself).
 
-At this point, you may click the `Random background` button to replace today's background with a new one,
-and `Today's background` to reset it to today's first background - what it was before `Random background` was clicked.
+At this point, you may click the `Random Background` button to replace today's background with a new one,
+and `Today's Background` to reset it to today's first background - what it was before `Random Background` was clicked.
 
 To get a new background every day, run `wallpaper -u` upon logging in.
 Your background won't change between different sessions on the same day - this is intentional and the core feature of Wallpaper.
@@ -69,5 +69,5 @@ Wallpaper is licensed under the GPLv3 (`GPL-3.0-or-later`).
 There are many `TODO` comments scattered around the codebase, which are good places
 to start when contributing to the project.
 
-Wallpaper's UI is created with [Cambalache,](https://gitlab.gnome.org/jpu/cambalache)
+Wallpaper's UI is created with [Cambalache](https://gitlab.gnome.org/jpu/cambalache),
 and using Cambalache is helpful when working on it.
