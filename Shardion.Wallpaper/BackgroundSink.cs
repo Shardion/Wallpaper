@@ -2,11 +2,8 @@ using System.Text.Json;
 
 namespace Shardion.Wallpaper
 {
-    // TODO: Delete this class, and instead automatically load every sink backend,
-    // using the most appropriate one for the current environment.
-    // This means that sink backends won't be able to take arguments,
-    // but it's a price worth paying for higher-quality code and better support for
-    // non-GNOME environments.
+    // TODO: Delete this class. I don't plan on supporting any sink other
+    // than GNOME Shell.
     public sealed class BackgroundSink
     {
         public IBackgroundSinkBackend Backend { get; }
